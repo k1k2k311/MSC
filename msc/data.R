@@ -1,0 +1,40 @@
+data<-read.csv("Final_ComplexContacts_table.csv")
+data2<-read.csv("Final_ligand_feature_table.csv")
+data3<-read.csv("molinspiration_data.csv")
+data4<-read.csv("dataneeded.csv")
+data5<-read.csv("dataneeded2.csv")
+data6<-read.csv("test.csv")
+data7<-read.csv("test2.csv")
+data8<-read.csv("test3.csv")
+data9<-read.csv("test4.csv")
+data10<-read.csv("test5.csv")
+ a<-data10$Number.of.HBonds
+ b<-data10$Polar.Contacts
+ c<-data10$Apolar.Contacts
+ d<-data10$Polar.Water.Contacts
+ e<-data10$Apolar.Water.Contacts
+ f<-data10$Surface.Waters
+ g<-data10$Cleft.Waters
+ h<-data10$Buried.Waters
+ i<-data10$Molar.Refractivity
+ j<-data10$Polarizability..10.24cm3.
+ k<-data10$miLogP
+ l<-data10$TPSA
+ m<-data10$natoms
+ n<-data10$MW
+ o<-data10$nOH
+ p<-data10$nOHNH
+ q<-data10$nviolations
+ r<-data10$nrotb
+ s<-data10$volume>
+ t<-data10$DeltaG.kJ.mol.
+ u<-data10$deltaH.kJ.mol.
+ v<-data10$TdeltaS.kJ.mol.
+ w<-data10$GPCR.ligand
+ x<-data10$Ion.channel.Modulator
+ y<-data10$Kinase.Inhibitor
+ z<-data10$Nuclear.Receptor.ligand
+ aa<-data10$Protease.ligand
+ ab<-data10$Enzyme.inhibitor
+ ac<-data10$OH.OHNH
+ reg.lm<-lm(t~a:a+a:b+a:c+a:d+a:e+a:f+a:g+a:h+a:i+a:j+a:k+a:l+a:m+a:n+a:o+a:p+a:q+a:r+a:s+a:t+a:u+a:v+a:w+a:x+a:y+a:z+a:aa+a:ab+a:ac+b:a+b:b+b:c+b:d+b:e+b:f+b:g+b:h+b:i+b:j+b:k+b:l+b:m+b:n+b:o+b:p+b:q+b:r+b:s+b:t+b:u+b:v+b:w+b:x+b:y+b:z+b:aa+b:ab+b:ac+c:a+c:b+c:c+c:d+c:e+c:f+c:g+c:h+c:i+c:j+c:k+c:l+c:m+c:n+c:o+c:p+c:q+c:r+c:s+c:t+c:u+c:v+c:w+c:x+c:y+c:z+c:aa+c:ab+c:ac+d:a+d:b+d:c+d:d+d:e+d:f+d:g+d:h+d:i+d:j+d:k+d:l+d:m+d:n+d:o+d:p+d:q+d:r+d:s+d:t+d:u+d:v+d:w+d:x+d:y+d:z+d:aa+d:ab+d:ac+e:a+e:b+e:c+e:d+e:e+e:f+e:g+e:h+e:i+e:j+e:k+e:l+e:m+e:n+e:o+e:p+e:q+e:r+e:s+e:t+e:u+e:v+e:w+e:x+e:y+e:z+e:aa+e:ab+e:ac+f:a+f:b+f:c+f:d+f:e+f:f+f:g+f:h+f:i+f:j+f:k+f:l+f:m+f:n+f:o+f:p+f:q+f:r+f:s+f:t+f:u+f:v+f:w+f:x+f:y+f:z+f:aa+f:ab+f:ac+g:a+g:b+g:c+g:d+g:e+g:f+g:g+g:h+g:i+g:j+g:k+g:l+g:m+g:n+g:o+g:p+g:q+g:r+g:s+g:t+g:u+g:v+g:w+g:x+g:y+g:z+g:aa+g:ab+g:ac+h:a+h:b+h:c+h:d+h:e+h:f+h:g+h:h+h:i+h:j+h:k+h:l+h:m+h:n+h:o+h:p+h:q+h:r+h:s+h:t+h:u+h:v+h:w+h:x+h:y+h:z+h:aa+h:ab+h:ac+i:a+i:b+i:c+i:d+i:e+i:f+i:g+i:h+i:i+i:j+i:k+i:l+i:m+i:n+i:o+i:p+i:q+i:r+i:s+i:t+i:u+i:v+i:w+i:x+i:y+i:z+i:aa+i:ab+i:ac+j:a+j:b+j:c+j:d+j:e+j:f+j:g+j:h+j:i+j:j+j:k+j:l+j:m+j:n+j:o+j:p+j:q+j:r+j:s+j:t+j:u+j:v+j:w+j:x+j:y+j:z+j:aa+j:ab+j:ac+k:a+k:b+k:c+k:d+k:e+k:f+k:g+k:h+k:i+k:j+k:k+k:l+k:m+k:n+k:o+k:p+k:q+k:r+k:s+k:t+k:u+k:v+k:w+k:x+k:y+k:z+k:aa+k:ab+k:ac+l:a+l:b+l:c+l:d+l:e+l:f+l:g+l:h+l:i+l:j+l:k+l:l+l:m+l:n+l:o+l:p+l:q+l:r+l:s+l:t+l:u+l:v+l:w+l:x+l:y+l:z+l:aa+l:ab+l:ac+m:a+m:b+m:c+m:d+m:e+m:f+m:g+m:h+m:i+m:j+m:k+m:l+m:m+m:n+m:o+m:p+m:q+m:r+m:s+m:t+m:u+m:v+m:w+m:x+m:y+m:z+m:aa+m:ab+m:ac+n:a+n:b+n:c+n:d+n:e+n:f+n:g+n:h+n:i+n:j+n:k+n:l+n:m+n:n+n:o+n:p+n:q+n:r+n:s+n:t+n:u+n:v+n:w+n:x+n:y+n:z+n:aa+n:ab+n:ac+o:a+o:b+o:c+o:d+o:e+o:f+o:g+o:h+o:i+o:j+o:k+o:l+o:m+o:n+o:o+o:p+o:q+o:r+o:s+o:t+o:u+o:v+o:w+o:x+o:y+o:z+o:aa+o:ab+o:ac+p:a+p:b+p:c+p:d+p:e+p:f+p:g+p:h+p:i+p:j+p:k+p:l+p:m+p:n+p:o+p:p+p:q+p:r+p:s+p:t+p:u+p:v+p:w+p:x+p:y+p:z+p:aa+p:ab+p:ac+q:a+q:b+q:c+q:d+q:e+q:f+q:g+q:h+q:i+q:j+q:k+q:l+q:m+q:n+q:o+q:p+q:q+q:r+q:s+q:t+q:u+q:v+q:w+q:x+q:y+q:z+q:aa+q:ab+q:ac+r:a+r:b+r:c+r:d+r:e+r:f+r:g+r:h+r:i+r:j+r:k+r:l+r:m+r:n+r:o+r:p+r:q+r:r+r:s+r:t+r:u+r:v+r:w+r:x+r:y+r:z+r:aa+r:ab+r:ac+s:a+s:b+s:c+s:d+s:e+s:f+s:g+s:h+s:i+s:j+s:k+s:l+s:m+s:n+s:o+s:p+s:q+s:r+s:s+s:t+s:u+s:v+s:w+s:x+s:y+s:z+s:aa+s:ab+s:ac+t:a+t:b+t:c+t:d+t:e+t:f+t:g+t:h+t:i+t:j+t:k+t:l+t:m+t:n+t:o+t:p+t:q+t:r+t:s+t:t+t:u+t:v+t:w+t:x+t:y+t:z+t:aa+t:ab+t:ac+u:a+u:b+u:c+u:d+u:e+u:f+u:g+u:h+u:i+u:j+u:k+u:l+u:m+u:n+u:o+u:p+u:q+u:r+u:s+u:t+u:u+u:v+u:w+u:x+u:y+u:z+u:aa+u:ab+u:ac+v:a+v:b+v:c+v:d+v:e+v:f+v:g+v:h+v:i+v:j+v:k+v:l+v:m+v:n+v:o+v:p+v:q+v:r+v:s+v:t+v:u+v:v+v:w+v:x+v:y+v:z+v:aa+v:ab+v:ac+w:a+w:b+w:c+w:d+w:e+w:f+w:g+w:h+w:i+w:j+w:k+w:l+w:m+w:n+w:o+w:p+w:q+w:r+w:s+w:t+w:u+w:v+w:w+w:x+w:y+w:z+w:aa+w:ab+w:ac+x:a+x:b+x:c+x:d+x:e+x:f+x:g+x:h+x:i+x:j+x:k+x:l+x:m+x:n+x:o+x:p+x:q+x:r+x:s+x:t+x:u+x:v+x:w+x:x+x:y+x:z+x:aa+x:ab+x:ac+y:a+y:b+y:c+y:d+y:e+y:f+y:g+y:h+y:i+y:j+y:k+y:l+y:m+y:n+y:o+y:p+y:q+y:r+y:s+y:t+y:u+y:v+y:w+y:x+y:y+y:z+y:aa+y:ab+y:ac+z:a+z:b+z:c+z:d+z:e+z:f+z:g+z:h+z:i+z:j+z:k+z:l+z:m+z:n+z:o+z:p+z:q+z:r+z:s+z:t+z:u+z:v+z:w+z:x+z:y+z:z+z:aa+z:ab+z:ac+aa:a+aa:b+aa:c+aa:d+aa:e+aa:f+aa:g+aa:h+aa:i+aa:j+aa:k+aa:l+aa:m+aa:n+aa:o+aa:p+aa:q+aa:r+aa:s+aa:t+aa:u+aa:v+aa:w+aa:x+aa:y+aa:z+aa:aa+aa:ab+aa:ac+ab:a+ab:b+ab:c+ab:d+ab:e+ab:f+ab:g+ab:h+ab:i+ab:j+ab:k+ab:l+ab:m+ab:n+ab:o+ab:p+ab:q+ab:r+ab:s+ab:t+ab:u+ab:v+ab:w+ab:x+ab:y+ab:z+ab:aa+ab:ab+ab:ac+ac:a+ac:b+ac:c+ac:d+ac:e+ac:f+ac:g+ac:h+ac:i+ac:j+ac:k+ac:l+ac:m+ac:n+ac:o+ac:p+ac:q+ac:r+ac:s+ac:t+ac:u+ac:v+ac:w+ac:x+ac:y+ac:z+ac:aa+ac:ab+ac:ac)
